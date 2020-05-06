@@ -20,4 +20,9 @@ describe('#RPS') do
     game = RPS.new("scissors")
     expect(game.wins?("scissors")).to(eq("draw"))
   end
+
+  it ("assigns value to cpu_throw using random number generator") do
+    game = RPS.new("scissors")
+    expect(game.throw_gen).to(eq("scissors"))
+  end
 end
